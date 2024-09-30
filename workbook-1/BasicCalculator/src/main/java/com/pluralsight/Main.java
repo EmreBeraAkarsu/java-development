@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Enter the operation you want to do. Enter 'A' for add, 'S' for subtract, 'M' for multiply, and 'D' for divide: ");
         String operation = operationScanner.nextLine();
 
-        switch (operation){
+        switch (operation) {
 
             case "A":
                 result = num1 + num2;
