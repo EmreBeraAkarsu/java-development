@@ -9,7 +9,6 @@ public class Main {
         StringBuilder billingAddress = new StringBuilder();
         StringBuilder shippingAddress = new StringBuilder();
 
-
         System.out.println("Please enter your full name: ");
         fullName.append(scanner.nextLine()).append("\n\n");
 
