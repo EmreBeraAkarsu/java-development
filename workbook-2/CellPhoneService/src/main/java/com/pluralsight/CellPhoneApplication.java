@@ -7,6 +7,7 @@ public class CellPhoneApplication {
 
         CellPhone phone1 = new CellPhone();
         CellPhone phone2 = new CellPhone();
+        CellPhone phone3 = new CellPhone(123123, "Iphone X", "Verizon", "777-444-3322", "Emre Akarsu");
 
         Scanner input = new Scanner(System.in);
 
@@ -51,9 +52,11 @@ public class CellPhoneApplication {
 
         display(phone1);
         display(phone2);
+        display(phone3);
 
         phone1.dial(phone2.getPhoneNumber());
         phone2.dial(phone1.getPhoneNumber());
+
     }
 
     public static void display(CellPhone cellPhone){
