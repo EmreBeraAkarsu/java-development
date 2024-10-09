@@ -29,7 +29,7 @@ public class Main {
         DateTimeFormatter fmt4 = DateTimeFormatter.ofPattern("EEEE, MMM d, yyyy  hh:mm");
         formattedDateTime = zonedDateTime.format(fmt4);
         System.out.println(formattedDateTime);
-        
+
 
         DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("hh:mm");
         DateTimeFormatter fmt5 = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
