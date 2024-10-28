@@ -22,7 +22,7 @@ public class BlackJack {
 
         for (int i = numberOfPlayers; i > 0; i--){
 
-            System.out.println("Enter the names of the players: ");
+            System.out.println("Enter the name of the player: ");
             String name = scanner.nextLine();
 
             Player player = new Player(name);
@@ -40,7 +40,7 @@ public class BlackJack {
         }
 
         for (Integer value : values) {
-            
+
 
         }
 
