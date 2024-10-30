@@ -17,7 +17,7 @@ public class Main {
 
             System.out.println("Description: " + asset.getDescription());
             System.out.println("Date Acquired: " + asset.getDateAcquired());
-            
+
 
             if (asset instanceof Vehicle){
                 System.out.println();
