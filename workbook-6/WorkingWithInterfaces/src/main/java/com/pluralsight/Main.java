@@ -12,8 +12,8 @@ public class Main {
         Person person1 = new Person("Joe", "Smith", 34);
         Person person2 = new Person("Jane", "Smother", 34);
         Person person3 = new Person("Mike", "Sim", 34);
-        Person person4 = new Person("Luke", "kei", 34);
-        Person person5 = new Person("Jason", "kei", 34);
+        Person person4 = new Person("Luke", "Kei", 34);
+        Person person5 = new Person("Jason", "Kei", 34);
 
         people.add(person1);
         people.add(person2);
