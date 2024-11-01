@@ -31,7 +31,16 @@ public class Person implements Comparable<Person> {
     @Override
     public int compareTo(Person o) {
         int last = this.lastName.compareTo(o.lastName);
-        
+
         return last == 0 ? this.firstName.compareTo(o.firstName) : last;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

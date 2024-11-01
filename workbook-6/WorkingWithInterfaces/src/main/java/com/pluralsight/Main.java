@@ -15,6 +15,12 @@ public class Main {
         Person person4 = new Person("Luke", "kei", 34);
         Person person5 = new Person("Jason", "kei", 34);
 
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        people.add(person4);
+        people.add(person5);
+
 
         Collections.sort(people);
 
