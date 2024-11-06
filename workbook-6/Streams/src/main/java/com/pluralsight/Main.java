@@ -15,13 +15,13 @@ public class Main {
 
 
 
-        searchPersonByName(scanner);
+        searchPersonByName(scanner, people);
 
-        calculateAverageAge();
+        calculateAverageAge(people);
 
-        findOldest();
+        findOldest(people);
 
-        findYoungest();
+        findYoungest(people);
 
 
     }
@@ -46,21 +46,21 @@ public class Main {
 
     }
 
-    public static void searchPersonByName(Scanner scanner) {
+    public static void searchPersonByName(Scanner scanner, List<Person> people) {
 
         System.out.println("Enter LAST to search by last name, FIRST to search by first name");
         String searchOption = scanner.nextLine();
 
         if (searchOption.equalsIgnoreCase("last")) {
-            searchByLastName(scanner);
+            searchByLastName(scanner, people);
         } else if (searchOption.equalsIgnoreCase("first")) {
-            searchByFirstName(scanner);
+            searchByFirstName(scanner, people);
         } else {
             System.err.println("Incorrect search option!");
         }
     }
 
-    public static void searchByLastName(Scanner scanner) {
+    public static void searchByLastName(Scanner scanner, List<Person> people) {
         List<Person> filteredLastName = new ArrayList<>();
 
         System.out.println("Enter the last name to search for: ");
@@ -77,7 +77,7 @@ public class Main {
         }
     }
 
-    public static void searchByFirstName(Scanner scanner) {
+    public static void searchByFirstName(Scanner scanner, List<Person> people) {
         List<Person> filteredFirstName = new ArrayList<>();
 
         System.out.println("Enter the last name to search for: ");
@@ -95,7 +95,7 @@ public class Main {
     }
 
 
-    public static void calculateAverageAge() {
+    public static void calculateAverageAge(List<Person> people) {
 
         double totalAge = 0;
 
@@ -108,7 +108,7 @@ public class Main {
     }
 
 
-    public static void findOldest() {
+    public static void findOldest(List<Person> people) {
 
         int oldestAge = 0;
 
@@ -120,7 +120,7 @@ public class Main {
         System.out.println("Oldest age is: " + oldestAge);
     }
 
-    public static void findYoungest() {
+    public static void findYoungest(List<Person> people) {
 
         int youngestAge = 999999999;
 
