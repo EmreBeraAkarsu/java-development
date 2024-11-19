@@ -57,7 +57,9 @@ public class Program {
     }
 
     private static double calculateAverageAge(List<Person> people) {
-        List<Double> totalAge = people.stream().reduce(0, (total, person) -> total + person.getAge());
+        int totalAge = people.stream().map(Person::getAge).reduce(0, (total, age) -> total + age);
+
+        return (double)totalAge / people.size();
     }
 
     private static int findOldestAge(List<Person> people) {
