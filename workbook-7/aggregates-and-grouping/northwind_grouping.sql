@@ -26,12 +26,20 @@ from products
 group by SupplierID;
 
 -- 7) 
+select CategoryID, avg(UnitPrice)
+from products
+group by CategoryID;
 
-
--- 8) f
-
+-- 8) 
+select SupplierID, count(*)
+from products
+group by SupplierID
+having count(*) >= 5;
 
 -- 9) 
+select ProductID, ProductName, (UnitPrice * UnitsInStock) as inventory_value
+from products
+order by inventory_value desc, ProductName;
 
 
 
