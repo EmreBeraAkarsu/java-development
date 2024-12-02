@@ -9,11 +9,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        String option = displayMenu(scanner);
+        while (true) {
+            String option = displayMenu(scanner);
 
-        String query = setQuery(option);
+            String query = setQuery(option);
 
-        getResults(query, args, option);
+            getResults(query, args, option);
+        }
 
     }
 
@@ -108,7 +110,7 @@ public class Main {
         }
     }
 
-    public static void displayResults(String option, ResultSet results){
+    public static void displayResults(String option, ResultSet results) {
 
         try {
             if (option.equalsIgnoreCase("1")) {
