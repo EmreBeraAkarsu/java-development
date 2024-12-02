@@ -37,13 +37,13 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    displayAllProducts(username, password, dataSource);
+                    displayAllProducts(dataSource);
                     break;
                 case 2:
-                    displayAllCustomers(username, password, dataSource);
+                    displayAllCustomers(dataSource);
                     break;
                 case 3:
-                    displayAllCategories(username, password, dataSource);
+                    displayAllCategories(dataSource);
                     break;
                 case 0:
                     System.out.println("Exiting...");
@@ -55,7 +55,7 @@ public class Main {
         }
     }
 
-    private static void displayAllCategories(String username, String password, DataSource dataSource) {
+    private static void displayAllCategories(DataSource dataSource) {
         try {
 
             try (Connection connection = dataSource.getConnection();
@@ -106,7 +106,7 @@ public class Main {
         }
     }
 
-    private static void displayAllProducts(String username, String password, DataSource dataSource) {
+    private static void displayAllProducts(DataSource dataSource) {
         String query = "SELECT ProductID, ProductName, UnitPrice, UnitsInStock FROM products";
 
         try {
@@ -136,7 +136,7 @@ public class Main {
     }
 
 
-    private static void displayAllCustomers(String username, String password, DataSource dataSource) {
+    private static void displayAllCustomers(DataSource dataSource) {
         String query = "SELECT ContactName, CompanyName, City, Country, Phone FROM Customers ORDER BY Country";
 
         try {
