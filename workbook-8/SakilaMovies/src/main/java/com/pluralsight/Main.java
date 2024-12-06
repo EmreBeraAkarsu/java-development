@@ -43,13 +43,17 @@ public class Main {
                          """
                                  SELECT first_Name, last_Name
                                  FROM actor
-                                 Where last_name like "?"
+                                 Where last_name = ?
                                  ORDER BY first_Name;
                                  """);
 
+
+
                  ResultSet resultSet = statement.executeQuery()) {
 
+
                 statement.setString(1, lastNameToSearch);
+
 
                 System.out.println("Actor found:");
                 while (resultSet.next()) {
