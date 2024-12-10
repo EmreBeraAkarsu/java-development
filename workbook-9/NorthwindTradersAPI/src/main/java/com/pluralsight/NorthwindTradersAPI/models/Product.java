@@ -1,7 +1,6 @@
 package com.pluralsight.NorthwindTradersAPI.models;
 
 public class Product {
-
     private int productId;
     private String productName;
     private int categoryId;
