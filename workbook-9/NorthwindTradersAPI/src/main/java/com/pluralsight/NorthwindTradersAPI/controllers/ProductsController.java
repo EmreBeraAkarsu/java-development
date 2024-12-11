@@ -1,6 +1,8 @@
 package com.pluralsight.NorthwindTradersAPI.controllers;
 
+import com.pluralsight.NorthwindTradersAPI.models.Category;
 import com.pluralsight.NorthwindTradersAPI.models.Product;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -55,5 +57,12 @@ public class ProductsController {
     @RequestMapping(path = "/products/{productId}", method = RequestMethod.GET)
     public Product getProductById(@PathVariable int productId) {
         return productDao.getById(productId);
+    }
+
+
+    @RequestMapping(path = "/products", method = RequestMethod.POST)
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public Product addAProduct(@RequestBody Product product) {
+        return productDao.insert(product);
     }
 }

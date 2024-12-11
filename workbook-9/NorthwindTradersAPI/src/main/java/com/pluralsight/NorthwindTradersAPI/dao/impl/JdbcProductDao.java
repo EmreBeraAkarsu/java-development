@@ -1,8 +1,9 @@
-package com.pluralsight.NorthwindTradersSpringBoot4.dao.impl;
+package com.pluralsight.NorthwindTradersAPI.dao.impl;
 
 
 
 import com.pluralsight.NorthwindTradersAPI.dao.interfaces.IProductDao;
+import com.pluralsight.NorthwindTradersAPI.models.Category;
 import com.pluralsight.NorthwindTradersAPI.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -134,5 +135,7 @@ public class JdbcProductDao implements IProductDao {
             e.printStackTrace();
         }
     }
+
+
 
 }
